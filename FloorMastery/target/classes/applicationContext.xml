@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="io" class="com.sg.floormastery.ui.UserIOConsoleImpl"/>
+    
+    <bean id="view" class="com.sg.floormastery.ui.OrderView">
+        <constructor-arg ref="io"/>
+    </bean>
+    
+    <bean id="productDao" class="com.sg.floormastery.dao.ProductDaoFileImpl"/>
+    
+    <bean id="taxDao" class="com.sg.floormastery.dao.TaxesDaoFileImpl"/>
+    
+    <bean id="orderDao" class="com.sg.floormastery.dao.OrderDaoFileImpl"/>
+    
+    <bean id="exportDao" class="com.sg.floormastery.dao.ExportDao"/>
+    
+    <bean id="service" class="com.sg.floormastery.service.OrderService">
+    <constructor-arg ref="productDao" />
+    <constructor-arg ref="taxDao" />
+    <constructor-arg ref="orderDao" />
+    <constructor-arg ref="exportDao" />
+    </bean>
+    
+    <bean id="controller" class="com.sg.floormastery.controller.OrderController">
+        <constructor-arg ref="service" />
+        <constructor-arg ref="view" />
+    </bean>
+
+</beans>

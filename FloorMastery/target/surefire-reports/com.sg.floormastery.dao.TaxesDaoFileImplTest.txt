@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.floormastery.dao.TaxesDaoFileImplTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.032 sec <<< FAILURE! - in com.sg.floormastery.dao.TaxesDaoFileImplTest
+testGetAllTaxes  Time elapsed: 0.018 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <10>
+	at com.sg.floormastery.dao.TaxesDaoFileImplTest.testGetAllTaxes(TaxesDaoFileImplTest.java:63)
+
+testGetTax  Time elapsed: 0.004 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <com.sg.floormastery.dto.Taxes@3c034029> but was: <com.sg.floormastery.dto.Taxes@3c03b941>
+	at com.sg.floormastery.dao.TaxesDaoFileImplTest.testGetTax(TaxesDaoFileImplTest.java:53)
+

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.sg.floormastery.dao.ProductDaoFileImplTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.001 sec <<< FAILURE! - in com.sg.floormastery.dao.ProductDaoFileImplTest
+testGetProduct  Time elapsed: 0 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <com.sg.floormastery.dto.Product@53ec784> but was: <com.sg.floormastery.dto.Product@53ecec8>
+	at com.sg.floormastery.dao.ProductDaoFileImplTest.testGetProduct(ProductDaoFileImplTest.java:51)
+
+testGetAllProducts  Time elapsed: 0.001 sec  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <2> but was: <4>
+	at com.sg.floormastery.dao.ProductDaoFileImplTest.testGetAllProducts(ProductDaoFileImplTest.java:61)
+
